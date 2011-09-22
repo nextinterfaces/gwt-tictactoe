@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="dist" name="ywebb">
+
+	<property name="product.name" value="tictactoe" />
+	
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<property name="build.root.dir" value="build" />
+	<property name="build.dir" value="build/classes" />
+	<property name="build.war.dir" value="build/war" />
+	<property name="dist.dir" value="build/dist" />
+	<property name="war.dir" value="war" />
+
+	<path id="java.classpath">
+		<pathelement location="${build.dir}" />
+		<fileset dir="war/WEB-INF/lib/gwt.sdk">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="war/WEB-INF/lib/gwt.addons">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="gwt.classpath">
+		<pathelement location="src" />
+		<!-- <pathelement location="src-util" /> -->
+		<path refid="java.classpath" />
+	</path>
+
+	<!-- ===================================================================
+			macrodef: set.timestamp              
+	====================================================================
+-->
+	<macrodef name="set.timestamp">
+		<sequential>
+			<tstamp>
+				<format property="current.time" pattern="MMddhhmm" />
+			</tstamp>
+		</sequential>
+	</macrodef>
+
+	<!-- ===================================================================
+			target: init              
+	====================================================================
+-->
+	<target name="init" depends="clean, prepare">
+		<set.timestamp />
+		<copy includeemptydirs="false" todir="${build.dir}">
+			<fileset dir="src">
+				<exclude name="**/*.launch" />
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- ===================================================================
+			target: clean              
+	====================================================================
+-->
+	<target name="clean">
+		<delete dir="${build.root.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+
+	<!-- ===================================================================
+			target: prepare              
+	====================================================================
+-->
+	<target name="prepare" description="creates output directories">
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.war.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+
+	<!-- ===================================================================
+			target: build              
+	====================================================================
+-->
+	<target name="build" depends="">
+		<echo message="${ant.project.name}: ${ant.file}" />
+	</target>
+
+	<!-- ===================================================================
+			target: compile.java            
+	====================================================================
+-->
+	<target name="compile.java" depends="init" description="compiles Java sources">
+		<!--
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${build.dir}" source="${source}" target="${target}">
+			<src path="src-util" />
+			<classpath refid="java.classpath" />
+			<compilerarg value="-Xlint:-unchecked" />
+		</javac>
+		-->
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${build.dir}" source="${source}" target="${target}">
+			<src path="src" />
+			<classpath refid="java.classpath" />
+			<compilerarg value="-Xlint:-unchecked" />
+		</javac>
+	</target>
+
+	<!-- ===================================================================
+			target: compile.gwt              
+	====================================================================
+-->
+	<target name="compile.gwt" depends="compile.java" description="compiles GWT sources to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" maxmemory="1024M" fork="yes" failonerror="true">
+			<classpath refid="gwt.classpath" />
+			<arg line="-war ${build.war.dir}" />
+			<arg line="-style OBFUSCATE" />
+			<arg line="-localWorkers 2" />
+			<arg value="ywb.Main" />
+			<jvmarg value="-Xss2048k" />
+		</java>
+	</target>
+
+	<!-- ===================================================================
+			target: archive             
+	====================================================================
+-->
+	<target name="dist" depends="" description="archives the artifacts">
+	
+		<copy todir="${build.war.dir}">
+			<fileset dir="${war.dir}">
+				<include name="*.html" />
+				<include name="*.css" />
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${build.war.dir}/images">
+			<fileset dir="${war.dir}/images">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.war.dir}/js">
+			<fileset dir="${war.dir}/js">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<!-- <replace file="${build.war.dir}/index.html" token=".css" value=".${current.time}.css" /> -->
+		<zip destfile="${dist.dir}/${product.name}.zip" 
+			basedir="${build.war.dir}"  
+			excludes="WEB-INF/**" />
+	</target>
+
+</project>

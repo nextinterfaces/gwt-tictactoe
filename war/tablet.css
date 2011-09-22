@@ -1,0 +1,329 @@
+.yLeftMenu .yImageButton {
+    margin: 5px 5px 0 5px;
+}
+
+.yTopMenu .content div {
+    margin: 5px;
+}
+
+.yRedcarpetPage .yImageButton {
+    float: left;
+    padding: 0 10px 10px 0;
+}
+
+.yWikiPage .yImageButton {
+    float: left;
+    padding: 0 10px 10px 0;
+}
+
+.yNotificationPage {
+    background: url(images/notification_bg.png) no-repeat;
+}
+
+.yTopCategoryMenu .yImageButton {
+    float: left;
+    padding: 0 10px 10px 0;
+}
+
+.yLeftMenu, .yNotifAll {
+    z-index: 100;
+}
+
+.yGamesPage .gameVideo {
+    z-index: 8;
+}
+
+.yGamesPage .gameCover {
+    z-index: 9;
+}
+
+.yGamesPage .gameTxt {
+    z-index: 6;
+}
+
+.yGamesPage .game0 {
+    z-index: 5;
+}
+
+.yGamesPage .game1 {
+    z-index: 4;
+}
+
+.yGamesPage .game2 {
+    z-index: 3;
+}
+
+.yGamesPage .game3 {
+    z-index: 2;
+}
+
+.yGamesPage .game4 {
+    z-index: 1;
+}
+
+.yThumb {
+    margin: 5px;
+    -moz-box-shadow: 5px 5px 20px #000;
+    -webkit-box-shadow: 5px 5px 20px #000;
+    /*
+     border: 2px solid #999;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;*/
+}
+
+.yTextButton {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    text-shadow: 0 1px 2px #333;
+    text-overflow: ellipsis;
+    background: -webkit-gradient(linear, left top, right top, from(#333), to(#666));
+}
+
+.overlay-bg {
+	background: RGBA(0, 0, 0, .7);
+	position: absolute;
+	top: 0pt;
+	left: 0pt;
+	z-index: 100;
+	width: 100%;
+}
+
+.overlay-popup {
+	z-index: 101;
+	background: RGBA(255,255,255, .4);
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+
+.overlay-popup.yDialog {
+	background: RGBA(255,255,255, .7);
+  	padding: 20px;
+}
+
+.overlay-popup.yDialog .gwt-HTML {
+	line-height:150%;
+  	font-size: 90%;
+	background: RGBA(255,255,255, .4);
+	padding: 10px;
+}
+.overlay-popup.yDialog .loading {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    padding: 120px;
+}
+
+.overlay-popup.yDialog .scroll{
+	background: RGBA(255,255,255, .7);
+}
+
+.ySmallTxt {
+  	font-size: 70%;
+ 	color: #888;
+	padding: 10px 10px 10px 0;
+}
+
+.ySmallTxt p, .ySmallTxt u{
+ 	color: #888;
+}
+
+.yPhotoWrapper {
+	padding: 7px;
+}
+
+.yPhotoWrapper img{
+    max-height: 550px;
+    max-width: 1024px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.yPhotoWrapper .gwt-HTML {
+  padding: 5px;
+  background: RGBA(255,255,255, .3);
+  color: #666;
+  font-size: 80%;
+  margin: 5px 0 2px 0;
+}
+
+.yTitleLabel {
+  	background: RGBA(0,0,0, .75);
+  	color: #fff;
+	text-shadow: 2px 2px 2px #000;
+	letter-spacing: 2px;
+}
+
+.yTitleLabel p {
+  	color: #fff;
+  	font-size: 250%;
+	text-shadow: 2px 2px 2px #000;
+	letter-spacing: 2px;
+	padding: 10px 0 0 10px
+}
+
+.ySubMenuPage {
+  	z-index: 100;
+  	float: right;
+}
+
+.ySubMenuPage,
+.ySubMenuPage .gwt-HTML {
+  	text-align: right;	
+	margin: 20px;	
+}
+
+.ySubMenuPage .yOption {
+	border-radius: 2px;
+	background: RGBA(0,0,0, .5);
+  	color: #fff;
+  	font-size: 130%;
+	text-shadow: 2px 2px 2px #000;
+	letter-spacing: 1px;
+	padding: 8px 10px 8px 30px;
+}
+
+.ySubMenuPage .selected .yOption {
+	background: RGBA(255, 255, 255, .3);
+	text-shadow: 2px 2px 2px RGBA(0,0,0, .5);
+}
+
+.yWikiButton {
+  	float: right;
+	border-radius: 5px 5px;
+    padding: 4px;
+	margin: 20px;	
+}
+
+.yAZ {
+  	background: -webkit-gradient(linear, left top, left bottom, from(RGBA(255,255,255, .3)), to(RGBA(100,100,100, .3)));
+  	padding: 5px 5px 5px 15px;
+	font-size: 150%;
+	border-bottom-left-radius: 2px 2px;
+	border-bottom-right-radius: 2px 2px;
+	border-top-left-radius: 2px 2px;
+	border-top-right-radius: 2px 2px;
+  	color: #fff;
+	text-align: left;
+	margin: 15px 15px 15px 0;
+	text-shadow: -1px -1px 1px RGBA(0,0,0, .5);
+}
+
+.yAzNameDiv {	
+	margin: 15px 15px 15px 0;
+}
+.yAzName {
+  	font-size: 150%;
+	border-radius: 2px;
+	background: RGBA(0,0,0, .5);
+	/*background: -webkit-gradient(linear, left top, left bottom, from(RGBA(255,255,255, .1)), to(RGBA(0,0,0, .1)));
+  	*/
+  	color: #fff;
+  	font-size: 130%;
+	text-shadow: 1px 1px 1px #000;
+ 	padding: 5px;
+	letter-spacing: 1px;	
+	margin: 5px;	
+}
+
+.yAzName:first-letter {
+  	font-size:200%;
+  	color:#8A2BE2;
+}
+
+.yPopupPage {
+  /* background: #550000; */
+}
+
+.ySearchPage {
+ 	padding: 10px;
+  	background: RGBA(255,255,255, .1);
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+
+.ySearchName {
+  	font-size: 150%;
+	background: RGBA(255,255,255, .7);
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+ 	padding: 5px 10px;
+  	color: #2A00FF;
+  	width: 90%;
+  	min-height: 25px;
+}
+
+.ySearchBox {
+  	width: 100%;
+}
+
+.gwt-TextBox {
+  	color: #2A00FF;
+  	font-size: 150%;
+}
+
+.ySearchRow {
+  	background: RGBA(255,255,255, .5);
+}
+
+.ySearchRow td {
+  	padding: 10px;
+}
+
+.ySettingsPage {
+ 	padding: 10px;
+  	background: RGBA(255,255,255, .1);
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+}
+
+.ySettingsPage .gwt-HTML {
+  	font-size: 150%;
+	background: RGBA(255,255,255, .3);
+	border-bottom-left-radius: 5px 5px;
+	border-bottom-right-radius: 5px 5px;
+	border-top-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;
+ 	padding: 15px;
+  	color: #111;
+  	width: 90%;
+}
+
+.ySettingsPage .disclaimer {
+  margin: 20px 0 0;
+  padding: 10px;
+  background: RGBA(255,255,255, .3);
+  text-decoration: underline; 
+}
+
+.ySettingsPage .disclaimerText {
+  background: RGBA(255,255,255, .3);
+  color: #333;
+  font-size: 90%;
+  padding: 10px;
+}
+
+
+.ySettingsPage .cachePanel {
+  background: RGBA(255,255,255, .3);
+  color: #333;
+  font-size: 90%;
+  padding: 10px;
+}

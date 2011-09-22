@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <link type="text/css" rel="stylesheet" href="Tictac3.css">
+    <link type="text/css" rel="stylesheet" href="main.css">
+
+    <script type="text/javascript" language="javascript" src="ywb/ywb.nocache.js"></script>
+          <script>
+        	/* disable mouse selection */
+            document.onselectstart = new Function('return false');
+            function ds(e){
+                return false;
+            }
+            
+            function ra(){
+                return true;
+            }
+            
+            document.onmousedown = ds;
+            document.onclick = ra;
+        </script>  
+  </head>
+
+  <body>
+
+	<table align="center" class="container" CELLSPACING="0" CELLPADDING="0">
+		<tr>
+			<td>
+				<div align="center" id="control"/>
+			</td>
+			<td>	
+				<table align="center" id="tictable" CELLSPACING="0" CELLPADDING="0">
+					<tr><td id="cell00" /><td id="cell01" /><td id="cell02" /></tr>
+					<tr><td id="cell10" /><td id="cell11" /><td id="cell12" /></tr>
+					<tr><td id="cell20" /><td id="cell21" /><td id="cell22" /></tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+  </body>
+</html>

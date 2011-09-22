@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.0.0.0">
+
+	<name>Tic Tac Toe</name>
+	<description>
+		Play Tic Tac Toe on your PlayBook. You can play alone vs the computer or you can play with your friends in 2 Player mode.
+	</description>
+
+	<!--
+	<rim:loadingScreen backgroundImage="images/foreground.png" foregroundImage="/images/foreground.png" onLocalPageLoad="true">
+	-->
+	<rim:loadingScreen onLocalPageLoad="true">
+		<rim:transitionEffect type="zoomIn" />
+	</rim:loadingScreen>
+
+	<icon src="images/logo86.png" />
+
+	<content src="zz_index.html" />
+
+	<author src="Vancouver Ywebb Consulting Ltd" href="http://www.ywebb.com" />
+
+	<feature id="blackberry.ui.dialog" required="true" version="1.0.0.0" />
+	<feature id="blackberry.app" required="true" version="1.0.0.0" />
+	<feature id="blackberry.pim" required="true" version="1.0.0.0" />
+	<feature id="blackberry.invoke" required="true" version="1.0.0.0" />
+
+	<!--
+		<feature id="blackberry.ui.dialog" required="true" version="1.0.0"/> <access uri="http://www.roussev.org/"
+		subdomains="true"> <feature id="blackberry.app.event" required = "true" version="1.0.0"/> <feature
+		id="blackberry.invoke" required = "true" version="1.0.0"/> </access>
+	-->
+
+	<access uri="*" subdomains="true" />
+
+</widget>

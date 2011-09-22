@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="ywb">
+    
+    <inherits name="com.google.gwt.user.User"/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name='com.google.gwt.http.HTTP'/>
+    <inherits name="com.google.gwt.json.JSON"/>
+    <inherits name="com.google.gwt.inject.Inject"/>
+    <inherits name="com.google.gwt.logging.Logging"/>
+    <inherits name="com.google.gwt.safehtml.SafeHtml"/>
+    
+    <inherits name="org.adamtacy.GWTEffects"/>
+    <!--
+    <inherits name='com.google.gwt.widgetideas.GWTCanvas' /> <inherits name='com.ampatspell.mootools.MooTools' />
+    -->
+    <inherits name="com.google.gwt.search.Search"/>
+    
+    <entry-point class='ywb.c.TicTacToe'/>
+    
+    <source path='c'/>
+    
+    <set-property name='gwt.logging.logLevel' value='ALL'/>
+    <set-property name='gwt.logging.popupHandler' value='DISABLED'/>
+    <set-property name='gwt.logging.consoleHandler' value='ENABLED'/>
+    <set-property name='gwt.logging.developmentModeHandler' value='ENABLED'/>
+    <set-property name="gwt.logging.firebugHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.systemHandler" value="ENABLED"/>
+    
+    <!-- 
+    <set-property name="user.agent" value="gecko1_8"/>
+    <set-property name="user.agent" value="safari"/>
+    -->
+     
+    <!--
+    If you want to deploy this application outside of localhost,
+    you must obtain a Google AJAX Search API key at:
+    http://code.google.com/apis/search/signup.html
+    append &amp;key=ABC to the string below, replacing ABC with the key
+    obtained from the site above.
+    <script src="http://www.google.com/uds/api?file=uds.js&amp;v=1.0&amp;gwt=1&amp;key=ABQIAAAAinW6byQHMgq9jcmaqAXH5BQemAoEIMKIx8wixOI0BTIjEQTPpRThvvl_kntuNxe4djl-1DtffXFgcQ"/>
+    -->
+    
+</module>

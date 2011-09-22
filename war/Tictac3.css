@@ -1,0 +1,42 @@
+
+body {
+    background: url(images/bg6.jpg) no-repeat;
+}
+
+.container {
+  margin: 50px;
+}
+
+#tictable {
+    width: 480px;
+    height: 480px;
+    /*border-width: 1px;
+     border-spacing: ;
+     border-style: hidden;
+     border-color: gray;
+     border-collapse: separate; */
+    background: url(images/bgtable.png) no-repeat;
+}
+
+#tictable td {
+    padding: 5px 0 0 5px;
+    margin: 0px;
+    /*border-width: 1px;
+     padding: 5px;
+     border-style: inset;
+     border-color: white;
+     background-color: white;
+     -moz-border-radius: ; */
+}
+
+#control {
+  margin: 100px;
+}
+
+#control .gwt-PushButton {
+  padding: 20px;
+}
+
+.yImageButton {
+  padding: 15px;
+}
