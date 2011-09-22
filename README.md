@@ -1,7 +1,7 @@
 Tic Tac Toe
 ====
 
-Tic Tac Toe is HTML5 app designed for a tablet. It can be played as a multiplayer or against the computer.
+Tic Tac Toe is HTML5 app designed for a tablet. It can be played as a multiplayer game or against the computer.
 
 ### Demo (WebKit only):
 http://nextinterfaces.com/projects/tictactoe/
